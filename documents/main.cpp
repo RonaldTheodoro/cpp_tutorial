@@ -5,6 +5,8 @@
 
 #include "cnpj.h"
 #include "cpf.h"
+#include "document.h"
+#include "document_factory.h"
 
 using namespace std;
 
@@ -18,6 +20,17 @@ int main() {
     CNPJ *cnpj = new CNPJ(cnpj_document);
     cout << cnpj->is_valid() << endl;
     cnpj->show();
+
+
+    DocumentFactory *factory = new DocumentFactory();
+
+    Document *document_cpf = factory->get_document(cpf_document, 1);
+    cout << document_cpf->is_valid() << endl;
+    document_cpf->show();
+
+    Document *document_cnpj = factory->get_document(cnpj_document, 2);
+    cout << document_cnpj->is_valid() << endl;
+    document_cnpj->show();
 
     return EXIT_SUCCESS;
 }
