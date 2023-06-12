@@ -16,6 +16,7 @@ class CPF : public Document {
    private:
     int *document;
     int document_size = 11;
+
     int calc_first_digit();
     int calc_second_digit(int);
     int multiply_and_sum_first_9_nums(int);

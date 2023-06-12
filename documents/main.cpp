@@ -14,7 +14,7 @@ int main() {
     cout << cpf->is_valid() << endl;
     cpf->show();
 
-    int cnpj_document[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9, 1};
+    int cnpj_document[] = {1, 1, 2, 2, 2, 3, 3, 3, 0, 0, 0, 1, 8, 1};
     CNPJ *cnpj = new CNPJ(cnpj_document);
     cout << cnpj->is_valid() << endl;
     cnpj->show();
