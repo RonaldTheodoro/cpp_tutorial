@@ -1,11 +1,13 @@
 #pragma once
 
 #include <iostream>
+
 #include "document.h"
 
 using namespace std;
 
-class CPF : public Document{
+class CPF : public Document {
+    // https://www.macoratti.net/alg_cpf.htm
    public:
     CPF(int _document[]);
     bool is_valid();
