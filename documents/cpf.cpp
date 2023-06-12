@@ -44,3 +44,17 @@ void CPF::show() {
         cout << document[i];
     }
 }
+
+void CPF::show_format() {
+    cout << endl;
+    for (int i = 0; i < document_size; i++) {
+        cout << document[i];
+        if (i == 2 || i == 5) {
+            cout << ".";
+        }
+        if (i == 8) {
+            cout << "-";
+        }
+    }
+    cout << endl;
+}

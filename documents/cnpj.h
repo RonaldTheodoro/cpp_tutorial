@@ -12,6 +12,7 @@ class CNPJ : public Document {
     CNPJ(int _document[]);
     bool is_valid();
     void show();
+    void show_format();
 
    private:
     int *document;

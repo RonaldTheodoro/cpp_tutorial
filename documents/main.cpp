@@ -15,11 +15,13 @@ int main() {
     CPF *cpf = new CPF(cpf_document);
     cout << cpf->is_valid() << endl;
     cpf->show();
+    cpf->show_format();
 
     int cnpj_document[] = {1, 1, 2, 2, 2, 3, 3, 3, 0, 0, 0, 1, 8, 1};
     CNPJ *cnpj = new CNPJ(cnpj_document);
     cout << cnpj->is_valid() << endl;
     cnpj->show();
+    cnpj->show_format();
 
 
     DocumentFactory *factory = new DocumentFactory();
@@ -27,10 +29,12 @@ int main() {
     Document *document_cpf = factory->get_document(cpf_document, 1);
     cout << document_cpf->is_valid() << endl;
     document_cpf->show();
+    document_cpf->show_format();
 
     Document *document_cnpj = factory->get_document(cnpj_document, 2);
     cout << document_cnpj->is_valid() << endl;
     document_cnpj->show();
+    document_cnpj->show_format();
 
     return EXIT_SUCCESS;
 }

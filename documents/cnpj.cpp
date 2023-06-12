@@ -44,3 +44,20 @@ void CNPJ::show() {
         cout << document[i];
     }
 }
+
+void CNPJ::show_format() {
+    cout << endl;
+    for (int i = 0; i < document_size; i++) {
+        cout << document[i];
+        if (i == 1 || i == 4) {
+            cout << ".";
+        }
+        if (i == 7) {
+            cout << "/";
+        }
+        if (i == 11) {
+            cout << "-";
+        }
+    }
+    cout << endl;
+}
